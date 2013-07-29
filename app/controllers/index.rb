@@ -8,7 +8,7 @@ get '/:user' do
 
   if @user.tweets_stale?
     # @user.fetch_tweets!
-    @load = "ajax-loader.gif"
+    @load = "gandolf_smaller.gif"
   end
 
   @tweets = @user.tweets.limit(10)
