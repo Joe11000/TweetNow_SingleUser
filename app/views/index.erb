@@ -1,5 +1,19 @@
-<form action="/user" method="post">
+<div class="container">
+  <form action='/send_tweet' method="post">
+ <!--      <input                    type="hidden"    name="tweet[username]"  value="LiveItUp227">
+      <input id="tweet"         type="text"      name="tweet[text]"  value="This is Joes Tweet!"> -->
+      <input                    type="hidden"    name="username"         value="LiveItUp227">
+      <input id="tweet"         type="text"      name="text"             value="This is Joes Tweet!">
+      <input id="submit_button" type="submit"                            value="Send Tweet" >
+  </form>
+
+  <img id="loading_gif" src="loading_gif.gif" >
+</div>
+
+
+<!-- <form action="/user" method="post">
   <input type='text' name='user' placeholder='Enter a twitter username'>
   <input type='submit' value='See Tweets'>
 </form>
 
+ -->
