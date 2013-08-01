@@ -3,42 +3,8 @@ get '/' do
   erb :index
 end
 
-# get '/:user' do
-#   @user = TwitterUser.find_by_user_name(params[:user])
-
-#   if @user.tweets_stale?
-#     # @user.fetch_tweets!
-#     @load = "gandolf_smaller.gif"
-#   end
-
-#   @tweets = @user.tweets.limit(10)
-#   erb :_user
-# end
-
-# post '/user' do
-#   @user = TwitterUser.find_or_create_by_user_name(params[:user])
-#   redirect to("/#{@user.user_name}")
-# end
-
-
 
 post '/send_tweet' do # :tweeter' do
-  # later look up what user info is from database !!
-  # user = lookup
-  
-  # user = Twitter.user(params[:tweeter][:user])
-  # user = Twitter.update(params[:tweeter][:text])
-
   user = Twitter.user(params[:username])
   Twitter.update(params[:text])
-  # p params[:text]
 end
-
-# # new one
-# post '/send_tweet/:tweeter' do
-#   # later look up what user info is from database !!
-#   # user = lookup
-  
-#   user = Twitter.user(params[:tweeter][:user])
-#   user = Twitter.update(params[:tweeter][:text])
-# end
